@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "NODE_ENV=production node server",
-    "dev": "nodemon server"
+    "dev": "nodemon server",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "Brad Traversy",
   "license": "MIT",
@@ -28,9 +30,11 @@
     "nodemailer": "^6.3.0",
     "randomatic": "^3.1.1",
     "slugify": "^1.3.5",
-    "xss-clean": "^0.1.1"
+    "xss-clean": "^0.1.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "nodemon": "^1.19.2"
-  }
+  },
+  "snyk": true
 }
